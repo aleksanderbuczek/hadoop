@@ -1,4 +1,4 @@
--- CREATE GRAPH
+// CREATE GRAPH
 
 CREATE (TheMatrix:Movie {title:'The Matrix', released:1999,
  tagline:'Welcome to the Real World'})
@@ -11,9 +11,10 @@ CREATE
  (Keanu)-[:ACTED_IN {roles:['John Wick']}]->(JohnWick),
  (AndyW)-[:DIRECTED]->(TheMatrix)
  
--- DELETE GRAPH
+// DELETE GRAPH
 
 MATCH (n) DETACH DELETE n
 
--- DISPLAY GRAPH
+// DISPLAY GRAPH
+
 MATCH (n)-[r]->(m) RETURN n,r,m
